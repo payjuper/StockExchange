@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>Stock Data</title>
+</head>
+<body>
+    <h1>Welcome to the Stock API</h1>
+    <p>Here is the stock data:</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Flask가 전달한 `stocks` 데이터를 반복문으로 표시 -->
+            {% for stock in stocks %}
+            <tr>
+                <td>{{ stock['symbol'] }}</td>
+                <td>{{ stock['name'] }}</td>
+                <td>{{ stock['price'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>Buy Stock</h2>
+    <form id="buy-form">
+        <input type="text" id="symbol" placeholder="Stock Symbol" required />
+        <input type="number" id="quantity" placeholder="Quantity" required />
+        <input type="number" id="price" placeholder="Price" required />
+        <button type="submit">Buy</button>
+    </form>
+    <div id="buy-result"></div>
+
+
+
+</body>
+</html>
