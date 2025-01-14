@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/692d753e10.js" crossorigin="anonymous" defer></script>
 
     <title>Stock Data</title>
 </head>
 <body>
+  <header>
+    <a href="index.html" id="headerLogo"><span class="MS-gradient1">M</span><span class="MS-gradient2">S</span><span id="headerTitle">투자증권</span></a>
+    <ul id="headerNav">
+      <li><a href="#myAsset.html" class="headerNavli">내 자산</a></li>
+      <li><a href="#Trading.html" class="headerNavli">트레이딩</a></li>
+      <li><a href="#info.html" class="headerNavli">투자정보/뉴스</a></li>
+      <li><a href="#banking.html" class="headerNavli">인터넷 뱅킹</a></li>
+    </ul>
+    <div id="headerActions">
+      <a href="#login" class="action-link">로그인</a>
+      <button id="darkModeToggle"><i class="fa-solid fa-moon"></i> </button>
+      <a href="" id="headersupport"><i class="fa-solid fa-headset"></i></a>
+    </div>
+  </header>
+
     <h1>Welcome to the Stock API</h1>
     <p>Here is the stock data:</p>
     <table border="1">
@@ -38,7 +54,6 @@
         <button type="submit">Buy</button>
     </form>
     <div id="buy-result"></div>
-
 
 
 </body>
